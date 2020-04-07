@@ -1,7 +1,7 @@
 <h2>Details</h2>
-<div><span> Order# : </span>{{order.id}}</div>
+<div><span> Order# : </span>{{order.id }}</div>
 
-<div><label>Date: {{order.date}}
+<div><label>Date: {{order.date | uppercase}}
     <input [(ngModel)]="order.date" placeholder="date" />
   </label></div>
 
