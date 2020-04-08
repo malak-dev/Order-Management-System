@@ -24,3 +24,8 @@
 <div><label> Status : {{order.status}}
     <input [(ngModel)]="order.status" placeholder="status" />
   </label></div>
+
+
+<ag-grid-angular style="width: 1300px; height: 500px;" class="ag-theme-alpine" [rowData]="rowData"
+  [columnDefs]="columnDefs">
+</ag-grid-angular>
