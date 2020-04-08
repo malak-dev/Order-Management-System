@@ -26,6 +26,6 @@
   </label></div>
 
 
-<ag-grid-angular style="width: 1300px; height: 500px;" class="ag-theme-alpine" [rowData]="rowData"
+<ag-grid-angular style="width: 1300px; height: 500px;" class="ag-theme-alpine" [rowData]="rowData |async"
   [columnDefs]="columnDefs">
 </ag-grid-angular>

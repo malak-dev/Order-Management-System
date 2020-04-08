@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
 import { Order } from '../order'
 
 @Component({
@@ -19,24 +21,22 @@ export class OrdersComponent implements OnInit {
 
   }
   columnDefs = [
-    { headerName: 'Order#', field: 'Order' },
+    { headerName: 'Order#', field: 'OrderId', sortable: true },
     { headerName: 'Date', field: 'Date' },
     { headerName: 'Side', field: 'Side' },
     { headerName: 'Symbol', field: 'Symbol' },
     { headerName: 'Quantity', field: 'Quantity' },
     { headerName: 'Amount', field: 'Amount' },
-    { headerName: 'status', field: 'status' },
+    { headerName: 'status', field: 'Status' },
   ];
 
-  rowData = [
-    { Order: 1, Date: '2020-01-01', Side: 'BUY', Symbol: 'AAPL', Quantity: 10, Amount: 1000, status: 'NEW' },
+  rowData: any;
 
-  ];
-
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
 
   ngOnInit(): void {
+    this.rowData = this.http.get('https://next.json-generator.com/api/json/get/4kykG98vO');
   }
 
 }
