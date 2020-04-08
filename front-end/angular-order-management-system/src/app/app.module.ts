@@ -8,11 +8,13 @@ import { AgGridModule } from 'ag-grid-angular';
 import { OrdersComponent } from './orders/orders.component';
 
 import { FormsModule } from '@angular/forms';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    OrdersComponent
+    OrdersComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
