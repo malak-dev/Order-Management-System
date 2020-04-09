@@ -25,7 +25,8 @@
     <input [(ngModel)]="order.status" placeholder="status" />
   </label></div>
 
+<button (click)="getSelectedRows()">Get Selected Rows</button>
 
-<ag-grid-angular style="width: 1300px; height: 500px;" class="ag-theme-alpine" [rowData]="rowData |async"
-  [columnDefs]="columnDefs">
+<ag-grid-angular #agGrid style="width: 1300px; height: 500px;" class="ag-theme-alpine" [rowData]="rowData |async"
+  [columnDefs]="columnDefs" rowSelection="multiple" rowClicked="getSelectedRows()">
 </ag-grid-angular>

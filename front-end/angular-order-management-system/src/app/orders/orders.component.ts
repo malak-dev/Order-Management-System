@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { AgGridAngular } from 'ag-grid-angular';
 
 import { Order } from '../order'
 
@@ -9,6 +10,8 @@ import { Order } from '../order'
   styleUrls: ['./orders.component.scss']
 })
 export class OrdersComponent implements OnInit {
+  @ViewChild('agGrid') agGrid: AgGridAngular;
+
 
   order: Order = {
     id: 1,
@@ -21,13 +24,13 @@ export class OrdersComponent implements OnInit {
 
   }
   columnDefs = [
-    { headerName: 'Order#', field: 'OrderId', sortable: true },
+    { headerName: 'Order#', field: 'OrderId', sortable: true, checkboxSelection: true },
     { headerName: 'Date', field: 'Date' },
     { headerName: 'Side', field: 'Side' },
     { headerName: 'Symbol', field: 'Symbol' },
     { headerName: 'Quantity', field: 'Quantity' },
     { headerName: 'Amount', field: 'Amount' },
-    { headerName: 'status', field: 'Status' },
+    { headerName: 'Status', field: 'Status' },
   ];
 
   rowData: any;
@@ -35,8 +38,15 @@ export class OrdersComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.rowData = this.http.get('https://next.json-generator.com/api/json/get/4kykG98vO');
-  }
 
+  }
+  getSelectedRows() {
+    const selectedNodes = this.agGrid.api.getSelectedNodes();
+    const selectedData = selectedNodes.map(node => {
+      node.data,
+        console.log(node.data)
+    });
+  }
 }
