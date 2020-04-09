@@ -46,7 +46,8 @@ export class OrdersComponent implements OnInit {
     const selectedNodes = this.agGrid.api.getSelectedNodes();
     const selectedData = selectedNodes.map(node => {
       node.data,
-        console.log(node.data)
+        console.log(node.data.OrderId)
     });
+    console.log(selectedNodes[0].data.OrderId, "kkkkkkkkk")
   }
 }
