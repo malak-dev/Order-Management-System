@@ -13,16 +13,16 @@ export class OrdersComponent implements OnInit {
   @ViewChild('agGrid') agGrid: AgGridAngular;
 
 
-  order: Order = {
-    id: 1,
-    date: '2020-03-01',
-    side: 'BUY',
-    symbol: 'AAPL',
-    quantity: 10,
-    amount: 1000,
-    status: 'NEW'
+  // order: Order = {
+  //   id: 1,
+  //   date: '2020-03-01',
+  //   side: 'BUY',
+  //   symbol: 'AAPL',
+  //   quantity: 10,
+  //   amount: 1000,
+  //   status: 'NEW'
 
-  }
+  // }
   columnDefs = [
     { headerName: 'Order#', field: 'OrderId', sortable: true, checkboxSelection: true },
     { headerName: 'Date', field: 'Date' },
@@ -44,6 +44,7 @@ export class OrdersComponent implements OnInit {
   }
   getSelectedRows() {
     const selectedNodes = this.agGrid.api.getSelectedNodes();
+    console.log(selectedNodes[0], "lllll")
     const selectedData = selectedNodes.map(node => {
       node.data,
         console.log(node.data.OrderId)
