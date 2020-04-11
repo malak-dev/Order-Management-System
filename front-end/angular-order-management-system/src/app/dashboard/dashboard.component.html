@@ -1,4 +1,6 @@
 <h1> Order Dashboard <h1>
+    <button (click)="fetchStatusWorking()"> fetch</button>
+
     <div class="grid grid-pad">
       <a class="col-1-4">
         <div class="module order">
@@ -7,7 +9,7 @@
       </a>
       <a class="col-1-4">
         <div class="module order">
-          <h4>Working</h4>
+          <h4>Working ({{$order.length}})</h4>
         </div>
       </a>
       <a class="col-1-4">

@@ -1,8 +1,9 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Output, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AgGridAngular } from 'ag-grid-angular';
 
 import { Order } from '../order'
+import { Identifiers } from '@angular/compiler';
 
 @Component({
   selector: 'app-orders',
@@ -24,7 +25,7 @@ export class OrdersComponent implements OnInit {
 
   // }
   columnDefs = [
-    { headerName: 'Order#', field: 'OrderId', sortable: true, checkboxSelection: true },
+    { headerName: 'Order#', field: 'id', sortable: true, checkboxSelection: true },
     { headerName: 'Date', field: 'Date' },
     { headerName: 'Side', field: 'Side' },
     { headerName: 'Symbol', field: 'Symbol' },
@@ -35,20 +36,30 @@ export class OrdersComponent implements OnInit {
 
   rowData: any;
 
+  //message: any = "getSelectedRows()"
+
+
   constructor(private http: HttpClient) { }
 
 
   ngOnInit() {
-    this.rowData = this.http.get('https://next.json-generator.com/api/json/get/4kykG98vO');
+    this.rowData = this.http.get('http://localhost:3000/orders');
 
   }
+
+  // getSelectedRows() {
+  //   const selectedNodes = this.agGrid.api.getSelectedNodes();
+  //   const selectedData = selectedNodes[0].data
+  //   console.log(selectedData, "selecteddata")
+  // }
+
   getSelectedRows() {
-    const selectedNodes = this.agGrid.api.getSelectedNodes();
-    console.log(selectedNodes[0], "lllll")
-    const selectedData = selectedNodes.map(node => {
-      node.data,
-        console.log(node.data.OrderId)
-    });
-    console.log(selectedNodes[0].data.OrderId, "kkkkkkkkk")
+    const selectedNodes = this.agGrid.api.getSelectedNodes()
+    const selectedData = selectedNodes.map(function (node) { return node.data })
+    const selectedDataStringPresentation = selectedData.map(function (node) { return node.id + ' ' + node.Status }).join(', ')
+    console.log("hhhhhhh")
+    return selectedDataStringPresentation;
+
   }
+  currentvalue = "getSelectedRows()"
 }

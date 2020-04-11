@@ -11,12 +11,16 @@ import { OrdersComponent } from './orders/orders.component';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EditOrderComponent } from './edit-order/edit-order.component';
+import { Status } from './dashboard/status'
+
 
 @NgModule({
   declarations: [
     AppComponent,
     OrdersComponent,
-    DashboardComponent
+    DashboardComponent,
+    EditOrderComponent
   ],
   imports: [
     BrowserModule,
@@ -25,8 +29,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule
+
   ],
-  providers: [],
+  providers: [Status],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
