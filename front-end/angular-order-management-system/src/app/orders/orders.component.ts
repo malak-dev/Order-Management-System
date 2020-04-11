@@ -31,7 +31,15 @@ export class OrdersComponent implements OnInit {
     { headerName: 'Symbol', field: 'Symbol' },
     { headerName: 'Quantity', field: 'Quantity' },
     { headerName: 'Amount', field: 'Amount' },
-    { headerName: 'Status', field: 'Status' },
+    {
+      headerName: 'Status', field: 'Status',
+      cellEditor: 'agRichSelectCellEditor',
+      cellEditorParams: {
+        cellHeight: 50,
+        values: ['Allocated', 'new'],
+      },
+    },
+
   ];
 
   rowData: any;
@@ -59,7 +67,6 @@ export class OrdersComponent implements OnInit {
     const selectedDataStringPresentation = selectedData.map(function (node) { return node.id + ' ' + node.Status }).join(', ')
     console.log("hhhhhhh")
     return selectedDataStringPresentation;
-
   }
   currentvalue = "getSelectedRows()"
 }

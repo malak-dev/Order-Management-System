@@ -14,4 +14,11 @@ export class Status {
   fetchStatusNew(): Observable<Object> {
     return this.http.get('http://localhost:3000/orders?Status=New')
   }
+  fetchStatusAllocated(): Observable<Object> {
+    return this.http.get('http://localhost:3000/orders?Status=Allocated')
+  }
+
+  fetchStatusFilled(): Observable<Object> {
+    return this.http.get('http://localhost:3000/orders?Status=Filled')
+  }
 }

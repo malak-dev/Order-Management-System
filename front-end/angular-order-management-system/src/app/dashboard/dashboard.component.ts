@@ -11,20 +11,35 @@ import { Status } from './status'
 
 
 export class DashboardComponent implements OnInit {
-  $order;
+  $working;
+  $new
+  $allocated
+  $filled
   constructor(private status: Status) { }
 
-
   ngOnInit(): void {
-
+    this.$working = this.status.fetchStatusWorking().subscribe(res => this.$working = res);
+    this.$new = this.status.fetchStatusNew().subscribe(res => this.$new = res);
+    this.$allocated = this.status.fetchStatusAllocated().subscribe(res => this.$allocated = res);
+    this.$filled = this.status.fetchStatusAllocated().subscribe(res => this.$filled = res);
   }
 
-  fetchStatusWorking() {
-    this.$order = this.status.fetchStatusWorking().subscribe(res => this.$order = res);
-
-  }
-  // fetchStatusNew() {
-  //   this.$order = this.status.fetchStatusNew().subscribe(res => this.$order = res);
+  // fetchStatusWorking() {
+  //   this.$working = this.status.fetchStatusWorking().subscribe(res => this.$working = res);
 
   // }
+
+  // fetchStatusNew() {
+  //   this.$new = this.status.fetchStatusNew().subscribe(res => this.$new = res);
+
+  // }
+  // fetchStatusAllocated() {
+  //   return this.$allocated = this.status.fetchStatusAllocated().subscribe(res => this.$allocated = res);
+
+  // }
+  // fetchStatusFilled() {
+  //   return this.$filled = this.status.fetchStatusAllocated().subscribe(res => this.$filled = res);
+
+  // }
+
 }

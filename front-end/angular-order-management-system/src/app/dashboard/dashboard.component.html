@@ -1,25 +1,30 @@
 <h1> Order Dashboard <h1>
-    <button (click)="fetchStatusWorking()"> fetch</button>
 
+
+    <!-- <ul>
+      <li *ngFor="let account of $order">
+        {{ account[0].id}}
+      </li>
+    </ul> -->
     <div class="grid grid-pad">
       <a class="col-1-4">
         <div class="module order">
-          <h4>New</h4>
+          <h4>New ({{$new.length}})</h4>
         </div>
       </a>
       <a class="col-1-4">
         <div class="module order">
-          <h4>Working ({{$order.length}})</h4>
+          <h4>Working ({{$working.length}})</h4>
         </div>
       </a>
       <a class="col-1-4">
         <div class="module order">
-          <h4>Filled</h4>
+          <h4>Filled ({{$filled.length}})</h4>
         </div>
       </a>
       <a class="col-1-4">
         <div class="module order">
-          <h4>Allocated</h4>
+          <h4>Allocated ({{$allocated.length}})</h4>
         </div>
       </a>
     </div>
