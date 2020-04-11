@@ -4,6 +4,8 @@ import { AgGridAngular } from 'ag-grid-angular';
 
 import { Order } from '../order'
 import { Identifiers } from '@angular/compiler';
+import 'ag-grid-community/dist/styles/ag-grid.css';
+import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
 
 @Component({
   selector: 'app-orders',
@@ -11,6 +13,7 @@ import { Identifiers } from '@angular/compiler';
   styleUrls: ['./orders.component.scss']
 })
 export class OrdersComponent implements OnInit {
+
   @ViewChild('agGrid') agGrid: AgGridAngular;
 
 
@@ -24,49 +27,74 @@ export class OrdersComponent implements OnInit {
   //   status: 'NEW'
 
   // }
-  columnDefs = [
-    { headerName: 'Order#', field: 'id', sortable: true, checkboxSelection: true },
-    { headerName: 'Date', field: 'Date' },
-    { headerName: 'Side', field: 'Side' },
-    { headerName: 'Symbol', field: 'Symbol' },
-    { headerName: 'Quantity', field: 'Quantity' },
-    { headerName: 'Amount', field: 'Amount' },
-    {
-      headerName: 'Status', field: 'Status',
-      cellEditor: 'agRichSelectCellEditor',
-      cellEditorParams: {
-        cellHeight: 50,
-        values: ['Allocated', 'new'],
+  $gridApi;
+  $gridColumnApi;
+
+  $columnDefs;
+  $defaultColDef;
+  $rowData: any;
+
+  constructor(private http: HttpClient) {
+    this.$columnDefs = [
+      {
+        field: 'id',
+        minWidth: 160,
       },
-    },
-
-  ];
-
-  rowData: any;
-
-  //message: any = "getSelectedRows()"
-
-
-  constructor(private http: HttpClient) { }
+      { field: 'Date' },
+      {
+        field: 'Side',
+        minWidth: 140,
+      },
+      { field: 'Symbol' },
+      {
+        field: 'Quantity',
+        minWidth: 140,
+      },
+      {
+        field: 'Amount',
+        minWidth: 160,
+      },
+      { field: 'Status' },
+    ];
+    this.$defaultColDef = {
+      flex: 1,
+      minWidth: 100,
+      editable: true,
+    };
+  }
 
 
   ngOnInit() {
-    this.rowData = this.http.get('http://localhost:3000/orders');
-
+    this.http
+      .get(
+        'http://localhost:3000/orders'
+      )
+      .subscribe(data => {
+        this.$rowData = data;
+      });
   }
 
-  // getSelectedRows() {
-  //   const selectedNodes = this.agGrid.api.getSelectedNodes();
-  //   const selectedData = selectedNodes[0].data
-  //   console.log(selectedData, "selecteddata")
-  // }
-
-  getSelectedRows() {
-    const selectedNodes = this.agGrid.api.getSelectedNodes()
-    const selectedData = selectedNodes.map(function (node) { return node.data })
-    const selectedDataStringPresentation = selectedData.map(function (node) { return node.id + ' ' + node.Status }).join(', ')
-    console.log("hhhhhhh")
-    return selectedDataStringPresentation;
+  onGridReady(params) {
+    this.$gridApi = params.api;
+    this.$gridColumnApi = params.columnApi;
   }
-  currentvalue = "getSelectedRows()"
+
+  onCellValueChange(params: any) {
+    this.http
+      .patch(
+        `http://localhost:3000/orders/${params.data.id}`, params.data,
+      ).subscribe(
+        res => {
+          console.log('successfully updated');
+        },
+        error => {
+          console.log('failed updating', error);
+        }
+      );
+  }
+
+
 }
+
+
+
