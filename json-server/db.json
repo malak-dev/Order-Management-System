@@ -2,16 +2,16 @@
   "orders": [
     {
       "id": 17,
-      "Date": "Thu Jul 10 1986 11:25:57 GMT+0000 (UTC)",
-      "Side": "BUY",
+      "Date": "2019-07-01 ",
+      "Side": "SELL",
       "Symbol": "FLYBOYZ",
-      "Quantity": 6,
+      "Quantity": "20",
       "Amount": 827,
-      "Status": "Working"
+      "Status": "New"
     },
     {
       "id": 84,
-      "Date": "Mon May 15 1972 11:39:37 GMT+0000 (UTC)",
+      "Date": "2019-06-02",
       "Side": "BUY",
       "Symbol": "FURNIGEER",
       "Quantity": 31,
@@ -20,7 +20,7 @@
     },
     {
       "id": 39,
-      "Date": "Fri Feb 11 1983 18:22:27 GMT+0000 (UTC)",
+      "Date": "2020-02-10",
       "Side": "BUY",
       "Symbol": "XYQAG",
       "Quantity": 32,
@@ -29,16 +29,16 @@
     },
     {
       "id": 76,
-      "Date": "Mon Sep 25 1989 16:52:05 GMT+0000 (UTC)",
+      "Date": "2020-03-01",
       "Side": "SELL",
       "Symbol": "SLUMBERIA",
       "Quantity": 78,
       "Amount": 168,
-      "Status": "New"
+      "Status": "Allocated"
     },
     {
       "id": 78,
-      "Date": "Fri Jun 11 1993 15:03:29 GMT+0000 (UTC)",
+      "Date": "2020-04-01",
       "Side": "SELL",
       "Symbol": "ANIMALIA",
       "Quantity": 54,
@@ -47,7 +47,7 @@
     },
     {
       "id": 99,
-      "Date": "Tue Jan 24 2017 03:44:22 GMT+0000 (UTC)",
+      "Date": "2020-04-05",
       "Side": "SELL",
       "Symbol": "ZENCO",
       "Quantity": 21,
@@ -56,7 +56,7 @@
     },
     {
       "id": 61,
-      "Date": "Fri Mar 23 2018 20:06:49 GMT+0000 (UTC)",
+      "Date": "2020-02-03",
       "Side": "BUY",
       "Symbol": "SPLINX",
       "Quantity": 44,
@@ -65,7 +65,7 @@
     },
     {
       "id": 90,
-      "Date": "Wed Sep 08 1999 01:28:36 GMT+0000 (UTC)",
+      "Date": "2020-03-15",
       "Side": "BUY",
       "Symbol": "ENERVATE",
       "Quantity": 98,
@@ -74,7 +74,7 @@
     },
     {
       "id": 28,
-      "Date": "Tue Jul 12 1983 14:32:24 GMT+0000 (UTC)",
+      "Date": "2020-03-24",
       "Side": "SELL",
       "Symbol": "KOZGENE",
       "Quantity": 26,
@@ -83,7 +83,7 @@
     },
     {
       "id": 71,
-      "Date": "Sun Aug 24 2008 01:27:51 GMT+0000 (UTC)",
+      "Date": "2019-12-24",
       "Side": "BUY",
       "Symbol": "DAISU",
       "Quantity": 15,
@@ -92,7 +92,7 @@
     },
     {
       "id": 60,
-      "Date": "Thu Aug 11 1994 02:32:51 GMT+0000 (UTC)",
+      "Date": "2020-01-20",
       "Side": "BUY",
       "Symbol": "CALCU",
       "Quantity": 97,
@@ -101,7 +101,7 @@
     },
     {
       "id": 38,
-      "Date": "Mon Nov 13 1972 08:57:33 GMT+0000 (UTC)",
+      "Date": "2020-01-29",
       "Side": "SELL",
       "Symbol": "DREAMIA",
       "Quantity": 74,
@@ -110,7 +110,7 @@
     },
     {
       "id": 38,
-      "Date": "Wed Oct 02 2002 03:33:50 GMT+0000 (UTC)",
+      "Date": "2020-02-24",
       "Side": "SELL",
       "Symbol": "DUFLEX",
       "Quantity": 3,
@@ -119,7 +119,7 @@
     },
     {
       "id": 45,
-      "Date": "Sat Apr 04 1970 10:55:36 GMT+0000 (UTC)",
+      "Date": "2019-12-05",
       "Side": "SELL",
       "Symbol": "KIDSTOCK",
       "Quantity": 90,
@@ -128,7 +128,7 @@
     },
     {
       "id": 97,
-      "Date": "Sat Jun 30 1984 08:36:26 GMT+0000 (UTC)",
+      "Date": "2020-01-30",
       "Side": "BUY",
       "Symbol": "NAMEBOX",
       "Quantity": 33,
@@ -137,7 +137,7 @@
     },
     {
       "id": 15,
-      "Date": "Thu Feb 23 1978 23:35:27 GMT+0000 (UTC)",
+      "Date": "2020-02-18",
       "Side": "BUY",
       "Symbol": "EXOSPEED",
       "Quantity": 77,
@@ -146,7 +146,7 @@
     },
     {
       "id": 17,
-      "Date": "Mon Mar 27 1978 06:10:59 GMT+0000 (UTC)",
+      "Date": "2019-11-12",
       "Side": "SELL",
       "Symbol": "QUIZKA",
       "Quantity": 2,
@@ -155,7 +155,7 @@
     },
     {
       "id": 76,
-      "Date": "Fri May 10 1996 08:50:50 GMT+0000 (UTC)",
+      "Date": "2019-11-14",
       "Side": "SELL",
       "Symbol": "APEXIA",
       "Quantity": 9,
@@ -164,7 +164,7 @@
     },
     {
       "id": 50,
-      "Date": "Fri Jun 13 1980 11:12:10 GMT+0000 (UTC)",
+      "Date": "2019-11-15",
       "Side": "BUY",
       "Symbol": "TELEQUIET",
       "Quantity": 16,
@@ -173,7 +173,7 @@
     },
     {
       "id": 76,
-      "Date": "Tue Apr 19 1977 16:53:51 GMT+0000 (UTC)",
+      "Date": "2019-10-15",
       "Side": "BUY",
       "Symbol": "DEVILTOE",
       "Quantity": 35,
@@ -182,7 +182,7 @@
     },
     {
       "id": 14,
-      "Date": "Tue Jun 29 1982 07:14:08 GMT+0000 (UTC)",
+      "Date": "2020-01-19",
       "Side": "SELL",
       "Symbol": "EMPIRICA",
       "Quantity": 41,
@@ -191,7 +191,7 @@
     },
     {
       "id": 93,
-      "Date": "Tue Dec 02 2003 07:01:23 GMT+0000 (UTC)",
+      "Date": "2020-01-19",
       "Side": "SELL",
       "Symbol": "ECRAZE",
       "Quantity": 35,
@@ -200,7 +200,7 @@
     },
     {
       "id": 18,
-      "Date": "Tue Jan 20 2004 17:52:21 GMT+0000 (UTC)",
+      "Date": "2020-02-28",
       "Side": "SELL",
       "Symbol": "CORECOM",
       "Quantity": 13,
@@ -209,7 +209,7 @@
     },
     {
       "id": 6,
-      "Date": "Fri Feb 25 1977 15:45:57 GMT+0000 (UTC)",
+      "Date": "2020-03-16",
       "Side": "BUY",
       "Symbol": "SKYBOLD",
       "Quantity": 33,
@@ -218,7 +218,7 @@
     },
     {
       "id": 61,
-      "Date": "Wed Aug 10 1988 13:52:14 GMT+0000 (UTC)",
+      "Date": "2019-10-02",
       "Side": "BUY",
       "Symbol": "COSMETEX",
       "Quantity": 36,
@@ -227,7 +227,7 @@
     },
     {
       "id": 94,
-      "Date": "Thu Apr 16 2009 14:40:05 GMT+0000 (UTC)",
+      "Date": "2018-10-11",
       "Side": "BUY",
       "Symbol": "MARTGO",
       "Quantity": 34,
@@ -236,7 +236,7 @@
     },
     {
       "id": 9,
-      "Date": "Fri Nov 08 2019 07:06:36 GMT+0000 (UTC)",
+      "Date": "2018-09-10",
       "Side": "SELL",
       "Symbol": "NETROPIC",
       "Quantity": 59,
@@ -245,7 +245,7 @@
     },
     {
       "id": 17,
-      "Date": "Mon May 03 1999 05:09:13 GMT+0000 (UTC)",
+      "Date": "2018-08-10",
       "Side": "BUY",
       "Symbol": "VIAGRAND",
       "Quantity": 73,
@@ -254,7 +254,7 @@
     },
     {
       "id": 74,
-      "Date": "Fri Apr 12 1996 06:36:08 GMT+0000 (UTC)",
+      "Date": "2018-04-17",
       "Side": "SELL",
       "Symbol": "DECRATEX",
       "Quantity": 45,
@@ -263,7 +263,7 @@
     },
     {
       "id": 11,
-      "Date": "Mon Sep 04 2006 00:27:23 GMT+0000 (UTC)",
+      "Date": "2017-04-19",
       "Side": "BUY",
       "Symbol": "SLOGANAUT",
       "Quantity": 73,
