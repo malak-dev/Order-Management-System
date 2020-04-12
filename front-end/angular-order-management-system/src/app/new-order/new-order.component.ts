@@ -23,6 +23,8 @@ export class NewOrderComponent implements OnInit {
   Amount: number;
 
 
+
+
   AddItem() {
     const orderToPost: Order = {
       Date: this.Date,
@@ -32,6 +34,7 @@ export class NewOrderComponent implements OnInit {
       Quantity: this.Quantity,
       Amount: this.Amount
     };
+    console.log(orderToPost, "kkkk")
     const options = { headers: { 'Content-Type': 'application/json' } };
     this.http
       .post(

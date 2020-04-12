@@ -10,7 +10,6 @@ import { OrdersComponent } from './orders/orders.component';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { EditOrderComponent } from './edit-order/edit-order.component';
 import { Status } from './dashboard/status';
 import { NewOrderComponent } from './new-order/new-order.component'
 
@@ -20,7 +19,6 @@ import { NewOrderComponent } from './new-order/new-order.component'
     AppComponent,
     OrdersComponent,
     DashboardComponent,
-    EditOrderComponent,
     NewOrderComponent,
   ],
   imports: [

@@ -25,21 +25,18 @@ export class OrdersComponent implements OnInit {
     this.$columnDefs = [
       {
         field: 'id',
-        minWidth: 160,
+        sortable: true
       },
       { field: 'Date' },
       {
         field: 'Side',
-        minWidth: 140,
       },
       { field: 'Symbol' },
       {
         field: 'Quantity',
-        minWidth: 140,
       },
       {
         field: 'Amount',
-        minWidth: 160,
       },
       { field: 'Status' },
     ];

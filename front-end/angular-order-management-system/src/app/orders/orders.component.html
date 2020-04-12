@@ -1,3 +1,5 @@
+<h2> click on any order to edit it </h2>
+
 <ag-grid-angular #agGrid id="myGrid" class="ag-theme-alpine" [columnDefs]="$columnDefs" [defaultColDef]="$defaultColDef"
   [enterMovesDown]="true" [enterMovesDownAfterEdit]="true" [rowData]="$rowData" (gridReady)="onGridReady($event)"
   (cellValueChanged)="onCellValueChange($event)">
