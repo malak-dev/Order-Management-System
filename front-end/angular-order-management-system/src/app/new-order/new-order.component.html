@@ -1,32 +1,31 @@
 <p>new-order works!</p>
 <h2>Add a New Order</h2>
-<div class="form-group">
-  <form name="itemForm">
 
-    <div><label>Date:
-        <input id="Date" type="text" name="Date" required [(ngModel)]="$newItem.Date" class="form-control" />
-      </label></div>
+<form name="itemForm">
+  <div class="input">
+    Date: <input id="Date" type="Date" name="Date" required [(ngModel)]="Date" />
+  </div>
 
-    <div><label>Side :
-        <input id="Side" type="text" name="Side" required [(ngModel)]="$newItem.Side" class="form-control" />
-      </label></div>
+  <div class="input">
+    Side : <input id="Side" type="text" name="Side" required [(ngModel)]="Side" />
+  </div>
 
-    <div><label>Symbol :
-        <input id="Symbol" type="text" name="Symbol" required [(ngModel)]="$newItem.Symbol" class="form-control" />
-      </label></div>
+  <div class="input">
+    Symbol : <input id="Symbol" type="text" name="Symbol" required [(ngModel)]="Symbol" />
+  </div>
 
-    <div><label> Quantity :
-        <input id="Quantity" type="text" name="Quantity" required [(ngModel)]="$newItem.Quantity"
-          class="form-control" />
-      </label></div>
+  <div class="input">
+    Quantity : <input id="Quantity" type="number" name="Quantity" required [(ngModel)]="Quantity" />
+  </div>
 
-    <div><label> Amount :
-        <input id="Amount" type="text" name="Amount" required [(ngModel)]="$newItem.Amount" class="form-control" />
-      </label></div>
+  <div class="input">
+    Amount :
+    <input id="Amount" type="number" name="Amount" required [(ngModel)]="Amount" />
+  </div>
 
-    <div><label> Status :
-        <input id="Status" type="text" name="Status" required [(ngModel)]="$newItem.Status" class="form-control" />
-      </label></div>
-  </form>
+  <div class="input">
+    Status :
+    <input id="Status" type="text" name="Status" required [(ngModel)]="Status" />
+  </div>
   <button (click)="AddItem()"> Add </button>
-</div>
+</form>
