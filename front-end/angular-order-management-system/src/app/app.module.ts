@@ -7,12 +7,12 @@ import { AgGridModule } from 'ag-grid-angular';
 import { HttpClientModule } from '@angular/common/http';
 
 import { OrdersComponent } from './orders/orders.component';
-
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditOrderComponent } from './edit-order/edit-order.component';
-import { Status } from './dashboard/status'
+import { Status } from './dashboard/status';
+import { NewOrderComponent } from './new-order/new-order.component'
 
 
 @NgModule({
@@ -20,7 +20,8 @@ import { Status } from './dashboard/status'
     AppComponent,
     OrdersComponent,
     DashboardComponent,
-    EditOrderComponent
+    EditOrderComponent,
+    NewOrderComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,6 @@
 import { Component, OnInit, ViewChild, Output, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AgGridAngular } from 'ag-grid-angular';
-
-import { Order } from '../order'
 import { Identifiers } from '@angular/compiler';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
@@ -16,17 +14,6 @@ export class OrdersComponent implements OnInit {
 
   @ViewChild('agGrid') agGrid: AgGridAngular;
 
-
-  // order: Order = {
-  //   id: 1,
-  //   date: '2020-03-01',
-  //   side: 'BUY',
-  //   symbol: 'AAPL',
-  //   quantity: 10,
-  //   amount: 1000,
-  //   status: 'NEW'
-
-  // }
   $gridApi;
   $gridColumnApi;
 
@@ -62,7 +49,6 @@ export class OrdersComponent implements OnInit {
       editable: true,
     };
   }
-
 
   ngOnInit() {
     this.http

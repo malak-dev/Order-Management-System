@@ -1,32 +1,4 @@
-<!-- <h2>Details</h2>
-<div><span> Order# : </span>{{order.id }}</div>
-
-<div><label>Date: {{order.date | uppercase}}
-    <input [(ngModel)]="order.date" placeholder="date" />
-  </label></div>
-
-<div><label>Side : {{order.side}}
-    <input [(ngModel)]="order.side" placeholder="side" />
-  </label></div>
-
-<div><label>Symbol : {{order.symbol}}
-    <input [(ngModel)]="order.symbol" placeholder="symbol" />
-  </label></div>
-
-<div><label> Quantity : {{order.quantity}}
-    <input [(ngModel)]="order.quantity" placeholder="quantity" />
-  </label></div>
-
-<div><label> Amount : {{order.amount}}
-    <input [(ngModel)]="order.amount" placeholder="amount" />
-  </label></div>
-
-<div><label> Status : {{order.status}}
-    <input [(ngModel)]="order.status" placeholder="status" />
-  </label></div> -->
-
-
-<ag-grid-angular #agGrid style="width: 100%; height: 100%;" id="myGrid" class="ag-theme-alpine"
-  [columnDefs]="$columnDefs" [defaultColDef]="$defaultColDef" [enterMovesDown]="true" [enterMovesDownAfterEdit]="true"
-  [rowData]="$rowData" (gridReady)="onGridReady($event)" (cellValueChanged)="onCellValueChange($event)">
+<ag-grid-angular #agGrid id="myGrid" class="ag-theme-alpine" [columnDefs]="$columnDefs" [defaultColDef]="$defaultColDef"
+  [enterMovesDown]="true" [enterMovesDownAfterEdit]="true" [rowData]="$rowData" (gridReady)="onGridReady($event)"
+  (cellValueChanged)="onCellValueChange($event)">
 </ag-grid-angular>
