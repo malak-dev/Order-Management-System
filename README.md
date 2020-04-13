@@ -23,10 +23,10 @@ This project has been made using AngularJs,TypeScript
 
 
 ## Screenshots
-
+A Dashboard showing summary information about orders
 !["dashboard page"](https://raw.githubusercontent.com/malak-dev/Order-Management-System/master/docs/dashboard.png)
-
+This page allows the user to create a new order
 !["create_new_order"](https://raw.githubusercontent.com/malak-dev/Order-Management-System/master/docs/create_new_order.png)
-
+This page allows the user to show and edit all the existing orders 
 !["list_of_orders"](https://raw.githubusercontent.com/malak-dev/Order-Management-System/master/docs/list_of_orders.png)
 
