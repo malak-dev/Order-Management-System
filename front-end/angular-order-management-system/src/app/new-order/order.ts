@@ -2,7 +2,7 @@ export interface Order {
   Date: Date;
   Side: string;
   Symbol: string;
-  Status: string;
+  Status: any;
   Quantity: number;
   Amount: number;
 }

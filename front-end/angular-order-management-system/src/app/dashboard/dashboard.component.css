@@ -63,3 +63,8 @@ h4 {
     min-width: 60px;
   }
 }
+
+.dashboard{
+  margin-top: 6% !important;
+  margin-left: 2%;
+}

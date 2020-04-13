@@ -35,11 +35,16 @@
   <div class="label">
     <label> Status </label>
   </div>
-  <select required [(ngModel)]="Status">
-    <option value="1">Allocated</option>
-    <option value="2">Filled</option>
-    <option value="3">New</option>
-    <option value="4">Working</option>
-  </select>
+
+  <div class="input">
+    <input id="Status" type="text" name="Status" required [(ngModel)]="Status" />
+  </div>
   <button (click)="AddItem()" routerLink="/orders"> create </button>
 </form>
+
+<!-- <select required [(ngModel)]="Status">
+  <option required [(ngModel)]="Status" value="Allocated">Allocated</option>
+  <option required [(ngModel)]="Status" value="Filled">Filled</option>
+  <option required [(ngModel)]="Status" value="New">New</option>
+  <option required [(ngModel)]="Status" value="Working">Working</option>
+</select> -->

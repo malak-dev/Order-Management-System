@@ -18,14 +18,12 @@ export class NewOrderComponent implements OnInit {
   Date: Date;
   Side: string;
   Symbol: string;
-  Status: string;
+  Status: any;
   Quantity: number;
   Amount: number;
 
-
-
-
   AddItem() {
+    console.log(this, "iiiiiii")
     const orderToPost: Order = {
       Date: this.Date,
       Side: this.Side,

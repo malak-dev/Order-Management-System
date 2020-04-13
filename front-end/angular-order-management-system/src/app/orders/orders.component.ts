@@ -37,6 +37,7 @@ export class OrdersComponent implements OnInit {
       },
       {
         field: 'Amount',
+
       },
       { field: 'Status' },
     ];
