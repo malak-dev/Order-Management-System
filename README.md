@@ -4,22 +4,29 @@ It's a simple user interface to manage the orders
 This app contain three main elements :
 
 - A Dashboard showing summary information about orders making use of Angular Material components
-- A list view showing and editing a list of orders making use of ag-Grid
+- A list to show and edit the order making use of ag-Grid
 - A form allowing for create a new orders 
 
 
 ## Functionality:
 This project has been made using AngularJs,TypeScript
 
-## Getting Started
+## Getting Started    
 
 1-Install dependencies using the "npm install" command for front-end file
 
 2-Install the database using the "npm install -g json-server" command for Json-server file
 
-3-Start the database server using the "json-server --watch db.json" command , and this server will running on 'http://localhost:3000/orders' .
+3-Start the database server using the "json-server --watch db.json" command , and this server will run on 'http://localhost:3000/orders' .
 
-4-3-Start the Angular server using the "ng serve" command, The app will be served at http://localhost:4200/ .
+4-Start the Angular server using the "ng serve" command, The app will be served at http://localhost:4200/ .
 
 
 ## Screenshots
+
+!["dashboard page"](https://raw.githubusercontent.com/malak-dev/Order-Management-System/master/docs/dashboard.png)
+
+!["create_new_order"](https://raw.githubusercontent.com/malak-dev/Order-Management-System/master/docs/create_new_order.png)
+
+!["list_of_orders"](https://raw.githubusercontent.com/malak-dev/Order-Management-System/master/docs/list_of_orders.png)
+
