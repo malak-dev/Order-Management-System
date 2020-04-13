@@ -14,7 +14,7 @@ export class DashboardComponent implements OnInit {
   $allocated
   $filled
   constructor(private status: Status) { }
-
+  // get all the status from the database
   ngOnInit(): void {
     this.$working = this.status.fetchStatusWorking().subscribe(res => this.$working = res);
     this.$new = this.status.fetchStatusNew().subscribe(res => this.$new = res);

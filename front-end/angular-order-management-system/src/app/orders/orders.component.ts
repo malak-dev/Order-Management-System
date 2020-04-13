@@ -57,7 +57,6 @@ export class OrdersComponent implements OnInit {
         this.$rowData = data;
       });
   }
-
   onGridReady(params) {
     this.$gridApi = params.api;
     this.$gridColumnApi = params.columnApi;
